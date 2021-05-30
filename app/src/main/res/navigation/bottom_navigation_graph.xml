@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/bottom_navigation_graph">
-
+    android:id="@+id/bottom_navigation_graph"
+    app:startDestination="@id/binMenuFragment">
+    <fragment
+        android:id="@+id/binMenuFragment"
+        android:name="com.example.connectbin.presentation.ui.bin.BinMenuFragment"
+        android:label="BinMenuFragment" />
+    <fragment
+        android:id="@+id/historyMenuFragment"
+        android:name="com.example.connectbin.presentation.ui.history.HistoryMenuFragment"
+        android:label="HistoryMenuFragment" />
 </navigation>

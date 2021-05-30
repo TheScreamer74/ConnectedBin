@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/binMenuFragment"
+        android:title="Bin"
+        android:icon="@drawable/ic_bin_menu"/>
+    <item
+        android:id="@+id/historyMenuFragment"
+        android:title="History"
+        android:icon="@drawable/ic_history_menu"/>
+</menu>
