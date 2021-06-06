@@ -11,7 +11,7 @@ import com.google.firebase.ktx.Firebase
 class HistoryMenuViewModel: ViewModel() {
 
     private lateinit var database: DatabaseReference
-    lateinit var history: History
+    lateinit var history: HashMap<String, History>
 
     init {
         database = Firebase.database.reference
@@ -20,12 +20,13 @@ class HistoryMenuViewModel: ViewModel() {
 
 
     fun retrieveData() {
-        database.child("History").child("3017620422003").get().addOnSuccessListener {
-            history = History(it.child("Name").value as String,
-                it.child("PackagingRecycle").value as List<String>,
-                it.child("PackagingWaste").value as List<String>
-            )
-            Log.i("database result", "Got value ${history.packagingRecycle[0]}")
+        database.child("History").get().addOnSuccessListener {
+
+            Log.i("database result", it.value.toString())
+
+            history = it.value as HashMap<String, History>
+
+            //Log.i("database result", "Got value ${history.packagingRecycle[0]}")
         }.addOnFailureListener{
             Log.e("firebase", "Error getting data", it)
         }

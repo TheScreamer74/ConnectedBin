@@ -20,7 +20,7 @@ class HistoryMenuFragment: Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.history_menu_fragment, container, false)
         return binding.root
     }
